@@ -1,8 +1,4 @@
 (async () => {
-    function reactHandler() {
-        return Object.values(document.querySelector('#app > div > div'))[1].children[1]._owner;
-    }
-
     n = document.createElement('iframe');
     document.body.append(n);
     window.alert = n.contentWindow.alert.bind(window);
