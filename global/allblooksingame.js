@@ -10,10 +10,6 @@
     window.confirm = n.contentWindow.confirm.bind(window);
     n.remove();
 
-    value = window.webpackJsonp.map(e => Object.keys(e[1]).map(t => e[1][t])).reduce((e, t) => [...e, ...t], []).find(e => /\w{8}-\w{4}-\w{4}-\w{4}-\w{12}/.test(e.toString()) && /\(new TextEncoder\)\.encode\(\"(.+?)\"\)/.test(e.toString())).toString();
-    window.blooketBuild = value.match(/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}/)[0]
-    window.secret = value.match(/\(new TextEncoder\)\.encode\(\"(.+?)\"\)/)[1]
-    
     try {
         if (!location.href.includes("/lobby")) {
           alert("You don't seem to be on the blooks page. Join a game, and then run this while waiting in the lobby.");
