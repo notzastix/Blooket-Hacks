@@ -65,5 +65,5 @@
     } catch (e) {
         confirm('An error has occured, Would you like to report this on github?') ? window.open('https://github.com/notzastix/Blooket-Hacks/issues/new') : ""
     }
-    alert('These cheats/hacks are coded by: qaiik and zastix')
+    alert('These cheats/hacks are coded by: rxzyx, qaiik and zastix')
 })();
