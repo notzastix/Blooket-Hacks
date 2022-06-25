@@ -11,12 +11,15 @@
     n.remove();
 
     try {
-        if (!location.href.includes("/lobby")) {
+        if (!location.pathname.split('/').includes("lobby")) {
           alert("You don't seem to be on the blooks page. Join a game, and then run this while waiting in the lobby.");
-          location.reload();
+          return;
         }
         
         reactHandler().stateNode.setState({
+            lockedBlooks: []
+        })
+        reactHandler().alternate.stateNode.setState({
             lockedBlooks: []
         })
         
